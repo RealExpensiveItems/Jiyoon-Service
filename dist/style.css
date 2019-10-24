@@ -1,0 +1,465 @@
+#body {
+  font-family: 'Roboto', sans-serif;
+  margin: 5% 12%;
+  color: #3E3D3D;
+}
+
+.title {
+  font-family: 'Bitter', serif;
+  font-size: 20px;
+}
+
+.write {
+  text-align: right;
+}
+
+button {
+  outline: none;
+}
+
+.ratingAvg {
+  
+  display: grid;
+  grid-template-columns: 10%;
+  grid-row-gap: 50px;
+}
+
+.p {
+  margin: 5px;
+  color: #353434;
+}
+
+#snapshot {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#average {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin-left: 10%;
+}
+
+.stars {
+  font-size: 15px;
+  margin: 20px 0 5px 0;
+  cursor: pointer;
+}
+
+#overall {
+  margin-top: 15px;
+}
+
+#overallText{
+  margin-right: 20px;
+}
+
+.barHolder {
+  display: inline-block;
+  width: 220px;
+  border: 1px solid #D0CDCD;
+  height: 9px;
+  margin: 0 10px;
+  border-radius: 2px;
+  background-color: #F2F1F1;
+}
+
+.five {
+  display: block;
+  border: 1px solid #D0CDCD;
+  height: 9px;
+  border-radius: 2px;
+  transform: translateY(-1px);
+  z-index: 1;
+  /* background-color: #426c90;
+  width: 50%; */
+}
+
+.star {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#score {
+  padding-left: 100px;
+}
+
+.fit {
+  display: inline-block;
+  width: 32px;
+  height: 8px;
+  border: 1px solid #D0CDCD;
+  list-style-type: none;
+  z-index: -1;
+}
+
+.leftfit {
+  margin-left: 50px;
+}
+
+#smallLarge {
+  color: #B3B3B3;
+  font-size: 10px;
+  margin: 0 0 0 13%;
+}
+
+#fitword {
+  margin-bottom: 0;
+}
+
+#large {
+  margin-left: 10%;
+}
+
+#reviews {
+  float: left;
+}
+
+#sort {
+  float: right;
+}
+
+#q {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+#reviewNums {
+  margin-top: 5%;
+}
+
+#border {
+  margin: 0;
+  padding: 5px;
+  border-bottom: 1px solid #B3B3B3;
+}
+
+.dropdown {
+  /* float: left;
+  overflow: hidden; */
+  display: inline-block;
+}
+
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #3E3D3D;
+  padding: 14px 5px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #3E3D3D;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* 
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+#reviewTop {
+  margin-top: 20px;
+}
+
+.helpfulButtons {
+  padding: 8px;
+  margin: 2px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #B9B8B8;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.changeHelpfulStyle {
+  color: green
+}
+
+.reviewImg {
+  height: 200px; 
+  width: 250px; 
+  margin: 30px 30px 30px 0;
+  cursor: pointer;
+}
+
+#clickedRevImg {
+  height: 400px;
+  width: 60%;
+}
+
+#modalPicContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.helpfulButtons:hover {
+  box-shadow: inset 0 0 10px #D5D5D5;
+}
+
+#loadMore {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin: 30px auto;
+  font-size: 14px;
+  background-color: #F3F2F2;
+  border: 1px solid #B9B8B8;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#loadMore:hover {
+  box-shadow: inset 0 0 10px #C8C6C6;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltiptext {
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 200px;
+}
+
+ .tooltip .tooltiptext {
+  font-size: 13px;
+  line-height: 20px;
+  visibility: hidden;
+  width: 380px;
+  height: auto;
+  background-color: white;
+  color: #6A6969;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 5px;
+  border: 1px solid gray;
+
+  margin-right: 100px;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  transform: translateX(-125px);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+
+ .tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  margin-left: -100px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.clickedHelpfulButton {
+  padding: 8px;
+  margin: 2px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  pointer-events: none;
+}
+
+.clickedUNHelpfulButton {
+  padding: 8px;
+  margin: 2px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  pointer-events: none; 
+}
+
+.blackHelpful{
+  color: black;
+}
+
+.greenHelpful {
+  color: green;
+}
+
+.redUnhelpful {
+  color: red;
+}
+
+.reportButton {
+  padding: 8px;
+  margin: 2px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-style: italic;
+  pointer-events: none; 
+}
+
+#fitIndicator {
+  margin-top: 4px;
+  display: inline-block;
+  width: 11px;
+  border: 1px solid #D0CDCD;
+  height: 10px;
+  background-color: #426c90;
+  border-radius: 2px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+  .barHolder {
+    width: 180px;
+  }
+  
+  .five {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #average {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 5%;
+  }
+
+  #body {
+    margin: 30px;
+  }
+}
+
+#clickBarButtons{
+  clear: both;
+  margin: 10% 10% 0 0;
+
+}
+
+#filterStars {
+  padding: 13px;
+  margin-right: 10px;
+  width: auto;
+  font-size: 15px;
+  background-color: #426c90;
+  color: #F4F4F4;
+  border-radius: 3px;
+  border:none;
+  cursor: pointer;
+}
+
+#clearAll {
+  padding: 13px;
+  margin-right: 10px;
+  width: auto;
+  font-size: 15px;
+  color: #3E3D3D;
+  border-radius: 3px;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+}
+
+#unclickedRatingBar {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.full {
+  background-color: #426c90;
+  width: 100%;
+}
+.aboveNinety{
+  width: 90%;
+  background-color: #426c90;
+}
+.aboveEighty{
+  width: 80%;
+  background-color: #426c90;
+}
+.aboveSeventy{
+  width: 70%;
+  background-color: #426c90;
+}
+.aboveFifty{
+  width: 60%;
+  background-color: #426c90;
+}
+.fifty {
+  width: 50%;
+  background-color: #426c90;
+}
+.aboveForty{
+  width: 40%;
+  background-color: #426c90;
+}
+.aboveThirty {
+  width: 30%;
+  background-color: #426c90;
+}
+.aboveTwenty{
+  width: 20%;
+  background-color: #426c90;
+}
+.aboveTen {
+  width: 10%;
+  background-color: #426c90;
+}
+
+.reviewFit{
+  float: right;
+  top: 50%;
+  margin-right: 5%;
+  padding: 10% 0;
+}
+
+.reviewFitHolder{
+  margin: 0 auto;
+  display: inline-block;
+  width: 70px;
+  height: 8px;
+  border: 1px solid #D0CDCD;
+  list-style-type: none;
+  z-index: -1;
+}
