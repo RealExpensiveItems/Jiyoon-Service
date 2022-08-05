@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "file-loader": "^4.2.0",
     "moment": "^2.24.0",
-    "mongoose": "^5.7.4",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.3",
     "react": "^16.10.2",
